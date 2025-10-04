@@ -643,6 +643,7 @@
     <div id="result"></div>
   </div>
 
+
   <script>
     // Progress tracking
     const progressFill = document.getElementById('progressFill');
@@ -690,6 +691,7 @@
       submitText.textContent = 'Processing...';
       loading.style.display = 'block';
       
+      
       // Calculate score
       let total = 0;
       selects.forEach(select => total += parseInt(select.value));
@@ -732,10 +734,12 @@
           <div style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
             <p><em>This is a screening tool and not a diagnosis. Please consult with a healthcare professional for a comprehensive evaluation.</em></p>
           </div>
+            <div class="submit-container">
+             <button onclick="window.location.href='hm2.html'" style="margin-top:20px;">Go to Chatbot</button>
+            </div>
         `;
         result.className = resultClass;
-        result.style.display = 'block';
-        
+        result.style.display = 'block';  
         // Hide loading and reset button
         loading.style.display = 'none';
         submitBtn.disabled = false;
